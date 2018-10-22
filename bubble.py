@@ -9,13 +9,19 @@ inputmsgs = ["Hello", #0
              "What is your name?", #1 
              "What is the Mobile Programming Initiative?", #2 
              "How do we get there?", #3
-             "Thank you" #4
+             "Thank you", #4
+             "How are you" #5
             ] 
 outputmsgs = ["Hi there! I'm Bubble.", #0
               "My name is Bubble", #1
-              "", #2
-              "Well, ...", #3 
+              "The Mobile Programming Initiative aims to teach children to \
+              program.", #2
+              "Well, the first step was comming to Innovus. Well done for doing\
+              that. \nYou should consider doing a pilot study. \nYou will also\
+              need to approach potential investors or sponsors.\nConsider\
+              offering a holiday program to streamline the teaching material.", #3 
               "Pleasure!", #4
+              "I am feeling bubbly today", #5
               "Sorry. I don't understand." #last
              ]
 # handle button events
@@ -52,9 +58,9 @@ app.setBg("cyan")
 app.setFont(12)
 
 # add & configure widgets - widgets get a name, to help referencing them later
-app.addLabel("title", "Bubble")
-app.setLabelBg("title", "blue")
-app.setLabelFg("title", "white")
+app.startLabelFrame("Bubble", 0, 0)
+app.addImage("simple", "bubble.png")
+app.stopLabelFrame()
 
 app.addScrolledTextArea("txt")
 app.addEntry("question")
